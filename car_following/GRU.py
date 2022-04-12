@@ -33,7 +33,7 @@ data_test_y = np_dataY[int(data_size * 0.8) + 1: data_size]
 
 gru_model = tf.keras.models.Sequential()
 gru_model.add(tf.keras.layers.GRU(NEURONS_NUMBER, input_shape=(TIME_STEP, INPUT_DIMENSION),
-                                  return_sequences=False, activation='tanh', dropout=DROPOUT_RATE))
+                                  return_sequences=False, activation='tanh'))
 gru_model.add(tf.keras.layers.Dropout(0.2))
 gru_model.add(tf.keras.layers.Dense(OUTPUT_DIMENSION))
 adam = tf.keras.optimizers.Adam(learning_rate=LR)
