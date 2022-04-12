@@ -1,3 +1,5 @@
+# optional,将数据切分为x和y均为指定时间步长且x与y错开1frame的数据
+
 import pandas as pd
 import sys
 

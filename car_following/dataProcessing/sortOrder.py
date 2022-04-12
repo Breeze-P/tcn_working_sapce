@@ -1,9 +1,9 @@
-# 将筛选好的数据进行排序
+# 第四次处理，将筛选好的数据进行排序
 
 import pandas as pd
 import sys
 
-data = pd.read_csv("test_select.csv", header=0)
+data = pd.read_csv("selected_us_101.csv", header=0)
 
 name = ['Vehicle_ID', 'Frame_ID', 'cur_x', 'cur_y', 'lead_x', 'lead_y', 'cur_v', 'cur_a', 'lead_v', 'lead_a', 'Lane_ID']
 
@@ -16,4 +16,4 @@ content = sorted(content1, key=lambda x: (x[0], x[1]))
 # data.sort_values(by=['Global_Time', 'Local_Y'], axis=0)
 
 output = pd.DataFrame(columns=name, data=content)
-output.to_csv('sorted_i-80_new.csv', index=False)
+output.to_csv('sorted_us-101_new.csv', index=False)

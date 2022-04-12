@@ -1,5 +1,4 @@
 # 第一次处理数据，将重复数据和class不是2（非轿车的数据）排除
-# 预计用时 25m37s
 
 import pandas as pd
 import sys
@@ -18,7 +17,7 @@ for one in data.index:
                     lists[20], lists[22]]
         content.append(pastList)
         continue
-    if lists[10] == 2 and lists[20] != 0 and lists[22] != 0 and lists[11] != 0 and (lists[24] == 'i-80'):
+    if lists[10] == 2 and lists[20] != 0 and lists[22] != 0 and lists[11] != 0 and (lists[24] == 'us-101'):
         if lists[0] != pastList[0]:
             tempList = [lists[0], lists[1], lists[2], lists[3], lists[4], lists[5], lists[11], lists[12],
                         lists[13], lists[20], lists[22]]
@@ -35,4 +34,4 @@ for one in data.index:
     if one % 10000 == 0:
         print(one)
 output = pd.DataFrame(columns=name, data=content)
-output.to_csv('NGSIM_classFilter_i-80_new.csv', index=False)
+output.to_csv('NGSIM_classFilter_us-101_new.csv', index=False)

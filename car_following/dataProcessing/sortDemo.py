@@ -1,10 +1,9 @@
 # 第二次处理数据，将相同车同一时段数据汇总并排序
-# 预计用时 19m26s
 
 import pandas as pd
 import sys
 
-data = pd.read_csv("NGSIM_classFilter_i-80_new.csv")
+data = pd.read_csv("NGSIM_classFilter_us-101_new.csv")
 
 name = ['Vehicle_ID', 'Frame_ID', 'Total_Frames', 'Global_Time', 'Local_X', 'Local_Y', 'v_Vel', 'v_Acc',
         'Lane_ID', 'Preceding', 'Space_Headway']
@@ -18,4 +17,4 @@ content = sorted(content1, key=lambda x: (x[3], x[5], x[8]))
 # data.sort_values(by=['Global_Time', 'Local_Y'], axis=0)
 
 output = pd.DataFrame(columns=name, data=content)
-output.to_csv('NGSIM_ascendingSort_i-80_new.csv', index=False)
+output.to_csv('NGSIM_ascendingSort_us-101_new.csv', index=False)
