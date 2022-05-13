@@ -24,5 +24,5 @@ This is a Vehicle following trajectory optimization model based on Temporal Conv
 
 ## Parameters
 
-![](..\tcn_working_sapce\car_following\graphs\Parameter Explanation.png)
+![](tcn_working_sapce\car_following\graphs\Parameter Explanation.png)
 
